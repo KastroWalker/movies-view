@@ -18,6 +18,7 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
+    runtimeOnly("androidx.compose.material:material-icons-extended:1.2.0")
 }
 
 tasks.withType<KotlinCompile> {
