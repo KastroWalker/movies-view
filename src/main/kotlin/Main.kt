@@ -13,15 +13,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import utils.loadImageBitmap
 
 @Composable
 @Preview
 fun App() {
+    val coverImageUrl = "https://modobrincar.rihappy.com.br/wp-content/uploads/2022/06/CAPA-TOY-STORY.jpeg"
+    val coverImage = loadImageBitmap(coverImageUrl)
+
     MaterialTheme {
         Column {
             Text("Toy Story", fontSize = 64.sp, fontWeight = FontWeight(700))
             Image(
-                painter = painterResource("CAPA-TOY-STORY.jpeg"),
+                bitmap = coverImage,
                 contentDescription = "Capa do filme Toy Story",
                 modifier = Modifier.width(200.dp)
             )
